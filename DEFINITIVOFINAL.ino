@@ -61,7 +61,7 @@ void loop()
       digitalWrite( Motor2A, LOW),
       digitalWrite( Motor2B, LOW);
     }
-    else if( comandoBT == 'F' || comandoBT == 'G' || comandoBT == 'I')  //"F" ES FORWARD QUE ES AVANZAR MIENTRAS QUE "G" E "I" SON COMANDOS DE GIRO
+    else if( comandoBT == 'F' )  //"F" ES FORWARD QUE ES AVANZAR MIENTRAS QUE "G" E "I" SON COMANDOS DE GIRO
     {
       if (estadoMovimiento != 1)
       {
@@ -74,7 +74,7 @@ void loop()
         digitalWrite( Motor2B, LOW);
       }
     }
-    else if(comandoBT == 'B' || comandoBT == 'H' || comandoBT == 'J')  // "B" ES DE BACKWARD QUE ES REVERSA MIENTRAS QUE "H" Y "J" SON COMANDOS DE GIRO PERO CONTRARIOS QUE EL ANTERIOR
+    else if(comandoBT == 'B' )  // "B" ES DE BACKWARD QUE ES REVERSA MIENTRAS QUE "H" Y "J" SON COMANDOS DE GIRO PERO CONTRARIOS QUE EL ANTERIOR
     {
       if(estadoMovimiento != -1)
       {
@@ -87,7 +87,7 @@ void loop()
         digitalWrite( Motor2B, HIGH);
       }
     }
-    else if(comandoBT == 'L' || comandoBT == 'G' || comandoBT == 'H')  // "L" DE LEFT QUE ES IZQUIERDA "G" Y "H" SON DE AVANZAR O RETROCEDAR HACIA LA IZQUIERDA
+    else if(comandoBT == 'L' )  // "L" DE LEFT QUE ES IZQUIERDA "G" Y "H" SON DE AVANZAR O RETROCEDAR HACIA LA IZQUIERDA
     {
       if(estadoGiro != -1)
       {
@@ -101,7 +101,7 @@ void loop()
 
       }
     }
-    else if(comandoBT == 'R' || comandoBT == 'I' || comandoBT == 'J')  //"R" DE RIGHT QUE ES DERECHA "I" "J" SON COMANDOS PARA RETROCEDER O AVANZAR HACIA LA DERECHA
+    else if(comandoBT == 'R' )  //"R" DE RIGHT QUE ES DERECHA "I" "J" SON COMANDOS PARA RETROCEDER O AVANZAR HACIA LA DERECHA
     {
       if(estadoGiro != 1)
       {
